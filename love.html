@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Effects</title>
+    <style>
+        body {
+            background-image: url('https://www.bing.com/th/id/OGC.f48cab2a58bd6de032563298ce90fd4b?pid=1.7&rurl=https%3a%2f%2fi.pinimg.com%2foriginals%2f48%2fc9%2f52%2f48c9522aaa31a27582216bec737e92ce.gif&ehk=JrzcEFI3HEdw16FOGR4Pn%2bdUAjGJ1mUUOqDef7v0vTs%3d'); /* Replace with your GIF URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: rgb(14, 167, 255);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            padding: 50px;
+            height: 100vh; /* Full height of the viewport */
+            position: relative; /* Allows for positioning of other elements */
+        }
+        h1 {
+            font-size: 50px;
+            position: relative; /* Ensures h1 is positioned above the background */
+            z-index: 1; /* Stacks on top of background */
+        }
+        .heart {
+            position: fixed;
+            animation: float 5s infinite;
+            font-size: 30px;
+            z-index: 1; /* Ensure hearts are above the background */
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .graffiti {
+            position: absolute;
+            top: 20px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            animation: celebrate 1.5s forwards;
+            opacity: 0; /* Start invisible */
+        }
+        @keyframes celebrate {
+            0% { transform: translate(-50%, 0); opacity: 0; }
+            50% { transform: translate(-50%, -20px); opacity: 1; }
+            100% { transform: translate(-50%, -40px); opacity: 0; }
+        }
+        .send-message {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: pink; /* Change button color as needed */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>I miss you so much baby kooo!</h1>
+    <div class="heart">❤️</div>
+    <div class="heart" style="animation-delay: 1s;">❤️</div>
+    <div class="heart" style="animation-delay: 2s;">❤️</div>
+    
+    <!-- Graffiti Celebration -->
+    <div class="graffiti" id="graffiti">I love you!! MWAAAA!</div>
+    
+
+    <!-- Send Message Button -->
+    <a href="mailto:gamboadavidgabriel@gmail.com?subject=Love%20Message&body=I%20just%20want%20to%20say%20I%20love%20you!%20MWAAAA!" target="_blank">
+        <button class="send-message">click to reply please! </button>
+    </a>
+
+    <script>
+        // Show the graffiti message and alert
+        window.onload = function() {
+            const graffiti = document.getElementById('graffiti');
+            graffiti.style.animationPlayState = 'running'; // Start the animation
+            alert("I love you!! MWAAAA!");
+        };
+    </script>
+</body>
+</html>

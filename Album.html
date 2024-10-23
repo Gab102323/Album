@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Miss You</title>
+    <style>
+        body {
+            background-image: url('blue_hearts_lilies_background.jpg'); /* Replace with your background image */
+            background-size: cover;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            padding: 50px;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes-button {
+            background-color: blue;
+            color: white;
+        }
+        .no-button {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Baby ko miss mo na ba ko??</h1>
+        <button class="yes-button" onclick="goToLovePage()">Yes</button>
+        <button class="no-button" onclick="moveNoButton(this)">No</button>
+    </div>
+
+    <script>
+        function goToLovePage() {
+            window.location.href = 'love.html';
+        }
+
+        function moveNoButton(button) {
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.position = 'absolute';
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+
+            // Alert messages array
+            const messages = [
+                "Luh, bakit? Di mo na ko love?",
+                "Hala umisa pa, akala ko ba miss mo na ko?",
+                "Hindi mo na ko love?",
+                "Bakit ka nag n-no?",
+                "Mag yes ka na please!",
+                "Love mo ko, alam ko yan!",
+                "Huhu T-T"
+            ];
+
+            // Select a random message
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            alert(randomMessage);
+        }
+    </script>
+</body>
+</html>
